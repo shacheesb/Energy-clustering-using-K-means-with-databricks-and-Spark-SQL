@@ -6,19 +6,19 @@ This project analyzes household power consumption data to uncover patterns and f
 
 ## 📊 Project Highlights
 
-### 🧠 Clustering with K-Means (Spark MLlib)
+### Clustering with K-Means (Spark MLlib)
 - Grouped hourly usage patterns across the day.
 - Identified behavioral clusters like peak/off-peak energy consumption.
 - Used PySpark DataFrames and MLlib for scalable processing.
 
-### 🔮 Forecasting with Prophet
+### Forecasting with Prophet
 - Created accurate time series forecasts of `Global_active_power`.
 - Visualized trend and uncertainty intervals.
 - Used hourly data, downsampled to improve Prophet performance.
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Apache Spark** (PySpark, Spark SQL, MLlib)
 - **Prophet** for forecasting
@@ -33,9 +33,6 @@ This project analyzes household power consumption data to uncover patterns and f
 |------|-------------|
 | `Energy Usage Clustering and Forecasting Web App.ipynb` | Spark-based clustering and export pipeline |
 | `Prophet Time Series Forecasting.ipynb` | Prophet-based forecasting from cleaned Spark data |
-| `hourly_clusters.csv` | Clustered hourly power data |
-| `forecast_output.csv` | Prophet forecasted results |
-| `hourly_forecast_plot.png` | Forecast visualization plot |
 
 ---
 
