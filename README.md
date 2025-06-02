@@ -1,72 +1,57 @@
-# 🔌 Energy Usage Clustering and Forecasting
+# 🔋 Energy Usage Clustering and Forecasting with PySpark & Prophet
 
-This project analyzes hourly household energy consumption data to uncover usage patterns using unsupervised clustering and forecast future consumption using linear regression. Built with PySpark, Spark SQL, and scikit-learn, the project demonstrates how data science can uncover actionable insights in energy behavior.
-
----
-
-## 📊 Project Overview
-
-- **Clustering**: Used PySpark and Spark MLlib to group hourly usage patterns across 24-hour cycles using k-means.
-- **Forecasting**: Applied linear regression (scikit-learn) to model and predict average power usage across hours.
-- **Visualization**: Created clear plots comparing actual vs. predicted usage using Seaborn and Matplotlib.
-- **Deployment-Ready**: The workflow runs smoothly on Databricks or Jupyter, with CSV export support.
+This project analyzes household power consumption data to uncover patterns and forecast future usage. It combines the scalability of Apache Spark with the interpretability of Prophet to deliver both **unsupervised clustering** and **time series forecasting** for energy usage.
 
 ---
 
-## 📁 Files
+## 📊 Project Highlights
 
-| File | Description |
-|------|-------------|
-| `Energy Usage Clustering and Forecasting Web App.ipynb` | Main notebook with clustering, regression, plots, and export |
-| `hourly_clusters.csv` | Cleaned data with hourly usage and cluster labels |
-| `clustered_with_forecast.csv` | Output with added forecast column |
-| `hourly_forecast_plot.png` | Plot showing actual vs forecasted power usage |
+### 🧠 Clustering with K-Means (Spark MLlib)
+- Grouped hourly usage patterns across the day.
+- Identified behavioral clusters like peak/off-peak energy consumption.
+- Used PySpark DataFrames and MLlib for scalable processing.
+
+### 🔮 Forecasting with Prophet
+- Created accurate time series forecasts of `Global_active_power`.
+- Visualized trend and uncertainty intervals.
+- Used hourly data, downsampled to improve Prophet performance.
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Python**, **Pandas**, **Matplotlib**, **Seaborn**
-- **PySpark**, **Spark SQL**, **Spark MLlib**
-- **scikit-learn** for regression
-- **Databricks** for distributed data processing and clustering
-- **Streamlit** for dashboard UI
+- **Apache Spark** (PySpark, Spark SQL, MLlib)
+- **Prophet** for forecasting
+- **Pandas**, **Matplotlib**, **Seaborn**
+- **Databricks** (Cloud-based notebook environment)
+
+---
+
+## 📁 Notebooks & Outputs
+
+| File | Description |
+|------|-------------|
+| `Energy Usage Clustering and Forecasting Web App.ipynb` | Spark-based clustering and export pipeline |
+| `Prophet Time Series Forecasting.ipynb` | Prophet-based forecasting from cleaned Spark data |
+| `hourly_clusters.csv` | Clustered hourly power data |
+| `forecast_output.csv` | Prophet forecasted results |
+| `hourly_forecast_plot.png` | Forecast visualization plot |
 
 ---
 
 ## 🚀 How to Run
 
-1. Clone this repo:
-   ```bash
-   git clone https://github.com/your-username/energy-forecasting.git
-   cd energy-forecasting
-   ```
-
-2. Open the Jupyter notebook:
-   - In Databricks
-
+### In Databricks
+1. Upload your dataset (e.g., `household_power_consumption.txt`) to `dbfs:/FileStore/tables/`.
+2. Attach notebook to a running cluster (Standard is fine).
 3. Run cells in order:
-   - Data loading
-   - Cleaning
-   - Clustering
-   - Forecasting
-   - Visualization
+   - Load and clean data with PySpark
+   - Perform clustering with MLlib
+   - Export to Pandas for Prophet
+   - Forecast & visualize future usage
 
-4.  Run the Streamlit version:
-   ```bash
-   streamlit run app.py
-   ```
-
-
-
-## ✨ Future Work
-
-- Integrate temperature/weather features
-- Try Prophet or LSTM for time-series forecasting
-- Deploy as a public Streamlit dashboard
-- Add anomaly detection during peak load times
-
-
-
-
+### Optional (Local)
+```bash
+pip install pandas matplotlib seaborn prophet
+```
 
