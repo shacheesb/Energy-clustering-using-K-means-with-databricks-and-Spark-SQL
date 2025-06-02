@@ -4,7 +4,7 @@ This project analyzes household power consumption data to uncover patterns and f
 
 ---
 
-## 📊 Project Highlights
+## Project Highlights
 
 ### Clustering with K-Means (Spark MLlib)
 - Grouped hourly usage patterns across the day.
@@ -36,7 +36,7 @@ This project analyzes household power consumption data to uncover patterns and f
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 ### In Databricks
 1. Upload your dataset (e.g., `household_power_consumption.txt`) to `dbfs:/FileStore/tables/`.
